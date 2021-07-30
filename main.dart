@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 
 Future<List<Photo>> fetchPhotos(http.Client client) async {
   final response =
-      await client.get(r'https://www.potterapi.com/v1/characters?key=$2a$10$XWuwuqGla9l5NwhZHKbK..DAftC7lR8mgMPx6.f05a8QiT4ZqoGXC');
+      await client.get(r'https://www.potterapi.com/v1/characters?key=');
 
   // Use the compute function to run parsePhotos in a separate isolate.
   return compute(parsePhotos, response.body);
